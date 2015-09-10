@@ -21,7 +21,7 @@ $ hexo server #preview on http://0.0.0.0:4000/
 $ hexo s --debug # s short for server 
 ```
 
-# 安装NexT主题
+# 安装 NexT 主题
 [Docs](http://theme-next.iissnan.com/)
 
 ```
