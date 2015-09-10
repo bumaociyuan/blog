@@ -4,7 +4,10 @@ categories: hexo
 tags: [jekyll,hexo]
 ---
 
+<div align="center"> 
 ![image](http://7xlh4f.com1.z0.glb.clouddn.com/1.png)
+</div>
+
 
 # 安装 Hexo
 
@@ -196,7 +199,7 @@ todo
 
 ## Clicky Analytics
 
-新增文件 `themes/next/layout/_scripts/analyticsgetclicky-analytics.swig`
+新增文件 `themes/next/layout/_scripts/analytics/getclicky-analytics.swig`
 
 ```
 <script type="text/javascript">
