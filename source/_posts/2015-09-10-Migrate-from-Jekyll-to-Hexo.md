@@ -4,6 +4,8 @@ categories: hexo
 tags: [jekyll,hexo]
 ---
 
+![image](http://7xlh4f.com1.z0.glb.clouddn.com/1.png)
+
 # 安装 Hexo
 
 ```
