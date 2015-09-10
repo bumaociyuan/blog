@@ -252,9 +252,18 @@ clicky_site_ids.push({{ theme.getclicky_analytics }});
 
 ```
 
- 解决办法
+解决办法
  
  ```
  $ rm -rf .deploy_git
  $ copy -rf <bumaociyuan.github.io-path> .deploy_git
  ```
+ 
+# Permissions
+
+hexo n 文件没有修改权限
+
+![image](https://pbs.twimg.com/media/COglE-kUkAElI-f.png:large)
+
+解决办法
+[Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions)
