@@ -259,7 +259,7 @@ clicky_site_ids.push({{ theme.getclicky_analytics }});
  $ copy -rf <bumaociyuan.github.io-path> .deploy_git
  ```
  
-# Permissions
+# Permissions Problem
 
 hexo n 文件没有修改权限
 
