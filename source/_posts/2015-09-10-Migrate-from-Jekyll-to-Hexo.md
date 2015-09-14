@@ -267,3 +267,9 @@ hexo n 文件没有修改权限
 
 解决办法
 [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions)
+
+```
+$ _prefix=$(npm config get prefix)
+$ sudo chown -R `whoami` _prefix
+$ sudo chown -R `whoami` <blog-directory>
+```
