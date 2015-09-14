@@ -25,7 +25,7 @@ $ hexo s --debug # s short for server
 [Docs](http://theme-next.iissnan.com/)
 
 ```
-$ git clone https://github.com/iissnan/hexo-theme-next themes/next
+$ git clone git@github.com:iissnan/hexo-theme-next.git themes/next
 ```
 
 <!--more-->
