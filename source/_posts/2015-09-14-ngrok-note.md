@@ -60,4 +60,5 @@ ssh login
 
 ```
 $ proxychains4 ssh zx@0.tcp.ngrok.io -p 33213
+# http://bumaociyuan.github.io/breakwall/2015/08/10/using-shadowsocks-in-terminal.html
 ```
