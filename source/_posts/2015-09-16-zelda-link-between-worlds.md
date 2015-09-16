@@ -3,7 +3,8 @@ date: 2015-09-16 13:14:56
 categories: game
 tags: 3ds
 ---
-
+[全流程攻略](http://app.tgbus.com/saver/read.aspx?type=tvgame&id=396160)
+[支线任务一览](http://app.tgbus.com/saver/read.aspx?type=tvgame&id=396275)
 [刷钱流程](http://www.k73.com/3ds/25729.html)
 
 ```
