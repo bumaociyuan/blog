@@ -4,7 +4,7 @@ categories: game
 tags: 3ds
 ---
 
-# [刷钱流程](http://www.k73.com/3ds/25729.html)
+[刷钱流程](http://www.k73.com/3ds/25729.html)
 
 ```
 第一，获得大师剑
