@@ -3,7 +3,7 @@ layout: post
 title: "play ps game on mac with openemu"
 description: ""
 category: game
-tags: [openemu]
+tags: [openemu,playstation]
 ---
 
 <div align="center"> 
