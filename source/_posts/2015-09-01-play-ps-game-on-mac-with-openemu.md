@@ -6,12 +6,14 @@ category: game
 tags: [openemu]
 ---
 
+<div align="center"> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6z2Aa3lrDmM" frameborder="0" allowfullscreen></iframe>
+</div>
 
 1. Download `OpenEmu Experimental` from [http://openemu.org/](http://openemu.org) and unzip it
 2. Download `bios` from [http://www.theisozone.com/downloads/playstation/other/sony-playstation-bios-package/](http://www.theisozone.com/downloads/playstation/other/sony-playstation-bios-package/) and unzip it
 3. Open `OpenEmu` drag `SCPH5500.BIN` and `SCPH5502.BIN` into `OpenEmu`
-4. ~~Rename `SCPH5552.bin` to `SCPH5501.bin` and drag it into `OpenEmu`~~ rename as md5 chat
+4. ~~Rename `SCPH5552.bin` to `SCPH5501.bin` and drag it into `OpenEmu`~~ rename files follow the md5 chart
 5. Download roms and have fun :D
 
 [http://mednafen.fobby.net/documentation/psx.html](http://mednafen.fobby.net/documentation/psx.html)
