@@ -224,7 +224,7 @@ clicky_site_ids.push({{ theme.getclicky_analytics }});
 +{% include 'analytics/getclicky-analytics.swig' %} ＃add this line
 ```
 
-# Deployment
+# Deployment 
 直接使用 hexo-deployer-git 发布会出现覆盖commit 的问题
 源码如下 `node_modules/hexo-deployer-git/lib/deployer.js`
 
@@ -252,12 +252,24 @@ clicky_site_ids.push({{ theme.getclicky_analytics }});
 
 ```
 
-解决办法
+## 解决办法1
  
  ```
  $ rm -rf .deploy_git
  $ copy -rf <bumaociyuan.github.io-path> .deploy_git
  ```
+ 缺点：必须使用两个 repo ，发布麻烦
+ 
+## 解决办法2
+1. 建立给 github.io repo 建立 hexo 分支
+2. 复制 hexo 所有文件到 repo 文件夹
+3. 编辑 .gitignore
+
+	```
+	.DS_Store
+	```
+
+4. 
  
 # Permissions Problem
 
