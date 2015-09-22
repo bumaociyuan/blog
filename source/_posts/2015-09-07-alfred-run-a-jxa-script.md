@@ -18,3 +18,12 @@ app.displayAlert('wow')
 
 FOE
 ```
+
+
+**Nice**
+
+> Alfred v2.8
+> 
+> 21st Sep 2015
+> 
+>  •JavaScript is now available as a scripting language within Alfred Workflows (OS X 10.10+, using osascript)
