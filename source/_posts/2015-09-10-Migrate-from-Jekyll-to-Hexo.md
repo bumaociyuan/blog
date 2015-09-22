@@ -258,6 +258,7 @@ clicky_site_ids.push({{ theme.getclicky_analytics }});
  $ rm -rf .deploy_git
  $ copy -rf <bumaociyuan.github.io-path> .deploy_git
  ```
+ `resources` 必须放到 `public` 文件夹
  缺点：必须使用两个 repo ，发布麻烦
  
 ## 解决办法2
