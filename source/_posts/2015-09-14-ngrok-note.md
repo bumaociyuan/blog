@@ -129,7 +129,9 @@ make: *** [bin/go-bindata] Error 2
 ## Start server
 
 ```
-$ bin/ngrokd -domain="$NGROK_DOMAIN" -httpAddr=":8000"
+$ bin/ngrokd -domain="$NGROK_DOMAIN" -httpAddr=":8000" #client could not connect
+# or
+$ bin/ngrokd -tlsKey="assets/server/tls/snakeoil.key" -tlsCrt="assets/server/tls/snakeoil.crt" -domain="yourdomain.com"
 ```
 
 ## Compiling ngrok client
@@ -138,8 +140,16 @@ $ bin/ngrokd -domain="$NGROK_DOMAIN" -httpAddr=":8000"
 
 ### Compile
 
+Replace `/usr/local/src/ngrok/src/ngrok/log/logger.go` line 5 with 
+
 ```
-$ GOOS=darwin GOARCH=amd64 make release-client
+log "github.com/keepeye/log4go"
+# Thanks GFW
+```
+
+```
+$ GOOS=darwin GOARCH=amd64
+$ make release-client
 ```
 
 ## Start client
@@ -167,11 +177,8 @@ Error on server log
 ```
 [Self Hosted ngrokd fails to allow client to connect](https://github.com/inconshreveable/ngrok/issues/84)
 
-According to @gdtv's answer
+Solution
 ```
-I also have the same problem. 
-I use self-signed CA.
-Finally, I solved this problem. 
-The most important things is:
-you must use the client that you compile ngrok with your signing CA. DONOT download the client from ngrok.com
+$ bin/ngrokd -tlsKey="assets/server/tls/snakeoil.key" -tlsCrt="assets/server/tls/snakeoil.crt" -domain="yourdomain.com"
+# compile client with the same certificate
 ```
