@@ -62,3 +62,116 @@ ssh login
 $ proxychains4 ssh zx@0.tcp.ngrok.io -p 33213
 # http://bumaociyuan.github.io/breakwall/2015/08/10/using-shadowsocks-in-terminal.html
 ```
+
+# TUNNEL
+[TUNNEL](http://www.tunnel.mobi/)是一个基于NGROK的网络服务
+
+# Setup ngrok on your own server
+
+[自行编译ngrok服务端客户端，替代花生壳，跨平台](http://www.ekan001.com/articles/38)
+
+## Installl go on Ubuntu
+```
+$ sudo apt-get install golang 		＃not working
+$ go version 						# 1.02 is too low
+$ sudo apt-get remove --auto-remove golang #remove golang
+```
+[Install Golang 1.4 on Ubuntu](https://ubuntu.kertaskampus.com/install-golang-1.4-on-ubuntu/)
+
+For `32bit` machine
+
+```
+$ wget --no-check-certificate --no-verbose https://storage.googleapis.com/golang/go1.4.2.linux-386.tar.gz
+$ tar -C /usr/local -xzf go1.4.2.linux-386.tar.gz
+```
+
+Add this line on your `.bashrc`
+
+```
+export PATH=$PATH:/usr/local/go/bin
+```
+
+## Setup ngrok
+
+```
+$ cd /usr/local/src/
+$ git clone https://github.com/inconshreveable/ngrok.git
+$ export GOPATH=/usr/local/src/ngrok/
+$ export NGROK_DOMAIN="yourdomain.com"
+```
+
+```
+$ openssl genrsa -out rootCA.key 2048
+$ openssl req -x509 -new -nodes -key rootCA.key -subj "/CN=$NGROK_DOMAIN" -days 5000 -out rootCA.pem
+$ openssl genrsa -out device.key 2048
+$ openssl req -new -key device.key -subj "/CN=$NGROK_DOMAIN" -out device.csr
+$ openssl x509 -req -in device.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out device.crt -days 5000
+$ cp rootCA.pem assets/client/tls/ngrokroot.crt
+$ cp device.crt assets/server/tls/snakeoil.crt 
+$ cp device.key assets/server/tls/snakeoil.key
+```
+
+## Compiling ngrok
+
+```
+$ GOOS=linux GOARCH=amd64 make release-server
+#如果是32位系统，这里 GOARCH=386
+```
+
+```
+GOOS="" GOARCH="" go get github.com/jteeuwen/go-bindata/go-bindata
+# github.com/jteeuwen/go-bindata
+src/github.com/jteeuwen/go-bindata/toc.go:47: function ends without a return statement
+make: *** [bin/go-bindata] Error 2
+```
+[解决办法](https://github.com/inconshreveable/ngrok/issues/237)
+
+## Start server
+
+```
+$ bin/ngrokd -domain="$NGROK_DOMAIN" -httpAddr=":8000"
+```
+
+## Compiling ngrok client
+### Install golang on mac
+[https://golang.org/dl](https://golang.org/dl)
+
+### Compile
+
+```
+$ GOOS=darwin GOARCH=amd64 make release-client
+```
+
+## Start client
+
+Edit `zx.cfg`
+
+```
+server_addr: "yourdomain.com:4443"
+trust_host_root_certs: false
+```
+
+```
+$ ngrok -config zx.cfg -subdomain=test 8000
+```
+
+
+
+Error on server log
+
+```
+[09/23/15 01:42:27] [INFO] [tun:2a8cef20]New connection from ***.***.**.**:54043
+[09/23/15 01:42:27] [DEBG] [tun:2a8cef20] Waiting to read message
+[09/23/15 01:42:27] [WARN] [tun:2a8cef20] Failed to read message: remote error: bad certificate
+[09/23/15 01:42:27] [DEBG] [tun:2a8cef20] Closing
+```
+[Self Hosted ngrokd fails to allow client to connect](https://github.com/inconshreveable/ngrok/issues/84)
+
+According to @gdtv's answer
+```
+I also have the same problem. 
+I use self-signed CA.
+Finally, I solved this problem. 
+The most important things is:
+you must use the client that you compile ngrok with your signing CA. DONOT download the client from ngrok.com
+```
