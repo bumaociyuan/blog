@@ -98,9 +98,9 @@ $ cp device.key assets/server/tls/snakeoil.key
 
 ### Installl golang on Ubuntu
 ```
-$ sudo apt-get install golang 		＃not working
-$ go version 						# 1.02 is too low
-$ sudo apt-get remove --auto-remove golang #remove golang
+$ sudo apt-get install golang 					# do not use this
+$ go version 									# v1.02 is too low
+$ sudo apt-get remove --auto-remove golang		# remove golang v1.02
 ```
 [Install Golang 1.4 on Ubuntu](https://ubuntu.kertaskampus.com/install-golang-1.4-on-ubuntu/)
 
@@ -116,11 +116,15 @@ Add this line on your `.bashrc`
 ```
 export PATH=$PATH:/usr/local/go/bin
 ```
+### Compile
 
 ```
-$ GOOS=linux GOARCH=amd64 make release-server
+$ GOOS=linux GOARCH=amd64 make 
+$ release-server
 #如果是32位系统，这里 GOARCH=386
 ```
+
+Error
 
 ```
 GOOS="" GOARCH="" go get github.com/jteeuwen/go-bindata/go-bindata
@@ -158,7 +162,7 @@ $ make release-client
 
 ## Start client
 
-Edit `zx.cfg`
+Edit `config.cfg`
 
 ```
 server_addr: "yourdomain.com:4443"
@@ -166,7 +170,7 @@ trust_host_root_certs: false
 ```
 
 ```
-$ ngrok -config zx.cfg -subdomain=test 8000
+$ ngrok -config config.cfg -subdomain=test 8000
 ```
 
 
@@ -182,6 +186,7 @@ Error on server log
 [Self Hosted ngrokd fails to allow client to connect](https://github.com/inconshreveable/ngrok/issues/84)
 
 Solution
+
 ```
 $ bin/ngrokd -tlsKey="assets/server/tls/snakeoil.key" -tlsCrt="assets/server/tls/snakeoil.crt" -domain="yourdomain.com"
 # compile client with the same certificate
