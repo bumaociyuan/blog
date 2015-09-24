@@ -4,17 +4,19 @@ categories: ngrok
 tags:
 ---
 
+# Basic 
+
 > `ngrok.com` has been GFWed
 
-# Installation
+## Installation
 1. [https://ngrok.com/download](https://ngrok.com/download)
 2. unzip `ngrok.zip`
 
 <!--more-->
 
-# Usage
+## Usage
 
-## Expose a local web server to the internet
+### Expose a local web server to the internet
 
 ```
 $ ngrok http 8000
@@ -36,7 +38,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 
 `http://c9f486b5.ngrok.io` also GFWed
 
-## TCP Tunnels
+### TCP Tunnels
 
 ```
 $ ./ngrok tcp 22
@@ -63,33 +65,14 @@ $ proxychains4 ssh zx@0.tcp.ngrok.io -p 33213
 # http://bumaociyuan.github.io/breakwall/2015/08/10/using-shadowsocks-in-terminal.html
 ```
 
-# TUNNEL
-[TUNNEL](http://www.tunnel.mobi/)是一个基于NGROK的网络服务
+## Free server
+[TUNNEL](http://www.tunnel.mobi/)是一个基于NGROK的`免费`网络服务
 
 # Setup ngrok on your own server
 
 [自行编译ngrok服务端客户端，替代花生壳，跨平台](http://www.ekan001.com/articles/38)
 
-## Installl go on Ubuntu
-```
-$ sudo apt-get install golang 		＃not working
-$ go version 						# 1.02 is too low
-$ sudo apt-get remove --auto-remove golang #remove golang
-```
-[Install Golang 1.4 on Ubuntu](https://ubuntu.kertaskampus.com/install-golang-1.4-on-ubuntu/)
 
-For `32bit` machine
-
-```
-$ wget --no-check-certificate --no-verbose https://storage.googleapis.com/golang/go1.4.2.linux-386.tar.gz
-$ tar -C /usr/local -xzf go1.4.2.linux-386.tar.gz
-```
-
-Add this line on your `.bashrc`
-
-```
-export PATH=$PATH:/usr/local/go/bin
-```
 
 ## Setup ngrok
 
@@ -111,7 +94,28 @@ $ cp device.crt assets/server/tls/snakeoil.crt
 $ cp device.key assets/server/tls/snakeoil.key
 ```
 
-## Compiling ngrok
+## Compiling server
+
+### Installl golang on Ubuntu
+```
+$ sudo apt-get install golang 		＃not working
+$ go version 						# 1.02 is too low
+$ sudo apt-get remove --auto-remove golang #remove golang
+```
+[Install Golang 1.4 on Ubuntu](https://ubuntu.kertaskampus.com/install-golang-1.4-on-ubuntu/)
+
+For `32bit` machine
+
+```
+$ wget --no-check-certificate --no-verbose https://storage.googleapis.com/golang/go1.4.2.linux-386.tar.gz
+$ tar -C /usr/local -xzf go1.4.2.linux-386.tar.gz
+```
+
+Add this line on your `.bashrc`
+
+```
+export PATH=$PATH:/usr/local/go/bin
+```
 
 ```
 $ GOOS=linux GOARCH=amd64 make release-server
@@ -134,7 +138,7 @@ $ bin/ngrokd -domain="$NGROK_DOMAIN" -httpAddr=":8000" #client could not connect
 $ bin/ngrokd -tlsKey="assets/server/tls/snakeoil.key" -tlsCrt="assets/server/tls/snakeoil.crt" -domain="yourdomain.com"
 ```
 
-## Compiling ngrok client
+## Compiling client
 ### Install golang on mac
 [https://golang.org/dl](https://golang.org/dl)
 
