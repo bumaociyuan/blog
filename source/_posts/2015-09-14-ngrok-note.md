@@ -61,7 +61,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 ssh login
 
 ```
-$ proxychains4 ssh zx@0.tcp.ngrok.io -p 33213
+$ proxychains4 ssh username@0.tcp.ngrok.io -p 33213
 # http://bumaociyuan.github.io/breakwall/2015/08/10/using-shadowsocks-in-terminal.html
 ```
 
@@ -165,11 +165,23 @@ $ make release-client
 Edit `config.cfg`
 
 ```
-server_addr: "yourdomain.com:4443"
+server_addr: "bumaociyuan.cc:4443"
 trust_host_root_certs: false
+tunnels:
+  http:
+    subdomain: "test"
+    proto:
+      http: "80"
+ 
+  ssh:
+    remote_port: 2222
+    proto:
+      tcp: "22"
 ```
 
 ```
+$ ./ngrok -config config.cfg start http ssh
+# or
 $ ngrok -config config.cfg -subdomain=test 8000
 ```
 
