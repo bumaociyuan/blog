@@ -165,11 +165,11 @@ $ make release-client
 Edit `config.cfg`
 
 ```
-server_addr: "bumaociyuan.cc:4443"
+server_addr: "yourdomain.com:4443"
 trust_host_root_certs: false
 tunnels:
   http:
-    subdomain: "test"
+    subdomain: "subdomain"
     proto:
       http: "80"
  
