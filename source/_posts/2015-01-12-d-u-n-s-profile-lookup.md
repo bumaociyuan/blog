@@ -6,7 +6,7 @@ category: ios
 tags: [duns]
 ---
 
-~~[D-U-N-S Profile Lookup](https://developer.apple.com/ios/enroll/dunsLookupForm.action)~~
+[D-U-N-S Profile Lookup](https://developer.apple.com/ios/enroll/dunsLookupForm.action)
 
-[http://fedgov.dnb.com/webform](http://fedgov.dnb.com/webform)
+~~[http://fedgov.dnb.com/webform](http://fedgov.dnb.com/webform)~~
 
