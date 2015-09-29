@@ -212,5 +212,5 @@ $ vim /etc/rc.local
 add line before exit
 
 ```
-<ngrok-path>/ngrok -config config.cfg start http ssh
+<ngrok-path>/ngrok -config config.cfg start http ssh > /dev/null &
 ```
