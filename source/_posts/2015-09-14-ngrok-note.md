@@ -203,3 +203,14 @@ Solution
 $ bin/ngrokd -tlsKey="assets/server/tls/snakeoil.key" -tlsCrt="assets/server/tls/snakeoil.crt" -domain="yourdomain.com"
 # compile client with the same certificate
 ```
+
+## Add ngrok start up
+
+```
+$ vim /etc/rc.local
+```
+add line before exit
+
+```
+<ngrok-path>/ngrok -config config.cfg start http ssh
+```
