@@ -16,3 +16,9 @@ $ docker rm `docker ps -aq`
 $ curl -sSL https://get.daocloud.io/daomonit/install.sh | sh -s 9ec32a679c615b0e1b72fcfb546fc8889ccfcc72
 
 ```
+
+**加速pull**
+
+```
+$ dao pull ubuntu
+```
