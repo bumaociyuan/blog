@@ -14,6 +14,7 @@ tags: stf
 # Demo
 ![image](https://raw.githubusercontent.com/openstf/stf/master/doc/7s_usage.gif)
 
+<!--more-->
 
 # Requirements
 
