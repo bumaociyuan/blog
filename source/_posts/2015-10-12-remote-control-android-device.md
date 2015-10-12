@@ -1,4 +1,4 @@
-title: remote control android device
+title: Remote control android device
 date: 2015-10-12 15:09:37
 categories: android
 tags: stf
@@ -69,5 +69,16 @@ $ adb version
 ## Wireless connection
 
 ```
+# usb connect device
+$ adb tcpip 5555
+
+# disconnect usb
+
+$ adb connect ip
 $ stf local --allow-remote
 ```
+
+## Launch tcp in boot
+
+
+[How to edit the init.rc in android](http://droidcore.blogspot.com/2012/12/how-to-edit-initrc-in-android.html) 不敢尝试，感觉风险很大
