@@ -19,6 +19,12 @@ feed:
 
 getclicky_analytics: 100784435
 
+# title, chinese available
+links_title: 友情链接
+# links
+links:
+  kuanglijun312: http://kuanglijun312.github.io
+  # cjqhyy: http://cjqhyy.github.io
 
 avatar: https://avatars1.githubusercontent.com/u/4977911?v=3&s=460
 
