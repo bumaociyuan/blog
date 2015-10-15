@@ -1,0 +1,13 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+Allow: /archives/
+
+# Disallow: /vendors/
+# Disallow: /js/
+# Disallow: /css/
+# Disallow: /fonts/
+# Disallow: /vendors/
+# Disallow: /fancybox/
+Sitemap: http://bumaociyuan.github.io/sitemap.xml
+Sitemap: http://bumaociyuan.github.io/baidusitemap.xml
