@@ -10,6 +10,8 @@ tags: [openemu,playstation]
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6z2Aa3lrDmM" frameborder="0" allowfullscreen></iframe>
 </div>
 
+<!--more-->
+
 1. Download `OpenEmu Experimental` from [http://openemu.org/](http://openemu.org) and unzip it
 2. Download `bios` from [http://www.theisozone.com/downloads/playstation/other/sony-playstation-bios-package/](http://www.theisozone.com/downloads/playstation/other/sony-playstation-bios-package/) and unzip it
 3. Open `OpenEmu` drag `SCPH5500.BIN` and `SCPH5502.BIN` into `OpenEmu`

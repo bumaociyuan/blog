@@ -19,6 +19,8 @@ app.displayAlert('wow')
 FOE
 ```
 
+<!--more-->
+
 
 **Nice**
 

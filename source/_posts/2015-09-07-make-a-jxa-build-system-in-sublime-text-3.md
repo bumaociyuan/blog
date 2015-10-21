@@ -6,6 +6,8 @@ category: js
 tags: [jxa,sublime,applescript]
 ---
 
+[SUBLIME TEXT HELP » REFERENCE » Build Systems](http://sublimetext.info/docs/en/reference/build_systems.html)
+
 `Tools` -> `Build System` -> `New Build System...`
 
 ```
@@ -13,4 +15,6 @@ tags: [jxa,sublime,applescript]
 	"cmd": ["osascript","-l","JavaScript","$file"]
 }
 ```
+
+<!--more-->
 
