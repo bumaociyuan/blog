@@ -1,10 +1,10 @@
-title: fixed brew slow problem
+title: 解决 brew 慢的问题
 date: 2015-11-04 13:40:35
 categories: mac
 tags: homebrew
 ---
 
-# 修改镜像源
+# 方法一: 修改镜像源
 [brew update 慢 解决办法 镜像更新源](https://www.logcg.com/archives/1301.html)
 
 * 中科大brew镜像源
@@ -18,6 +18,8 @@ $ git remote set-url origin http://mirrors.ustc.edu.cn/homebrew.git
 # 中科大镜像源
 # 二者选其一即可更新
 ```
+
+<!--more-->
 
 ```
 $ cd ~
@@ -51,7 +53,7 @@ $ sudo chmod -R g+w /usr/local
 ```
 ***endif***
 
-# 用ss
+# 方法二: 用ss
 
 [using shadowsocks in terminal
 ](http://bumaociyuan.github.io/breakwall/2015/08/10/using-shadowsocks-in-terminal.html)
