@@ -283,6 +283,6 @@ hexo n 文件没有修改权限
 
 ```
 $ _prefix=$(npm config get prefix)
-$ sudo chown -R `whoami` _prefix
+$ sudo chown -R `whoami` $_prefix
 $ sudo chown -R `whoami` <blog-directory>
 ```
