@@ -10,7 +10,9 @@ tags: [bandwagon,tutorial]
 
 [tutorial](http://www.advertcn.com/thread-20498-1-1.html)
 
-~~[3.99$ VPS](https://bandwagonhost.com/aff.php?aff=322&pid=19)~~
+[我的推广链接](https://bandwagonhost.com/aff.php?aff=6022)
+
+~~[3.99$ VPS](https://bandwagonhost.com/aff.php?aff= 6022&pid=19)~~
 
 [7vps.net vps推荐网站](http://www.7vps.net/)
 
