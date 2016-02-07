@@ -9,12 +9,16 @@ tags: []
 [Five Tips for Using Self Signed SSL Certificates with iOS](http://blog.httpwatch.com/2013/12/12/five-tips-for-using-self-signed-ssl-certificates-with-ios/)
 [Create a HTTPS Server to install ipa locally](https://github.com/bumaociyuan/zxIpaServer)
 
+
 ```
-openssl genrsa -out myselfsigned.key 2048
+# example 
+# openssl genrsa -out myselfsigned.key 2048
 
-openssl req -new -x509 -key myselfsigned.key -out myselfsigned.cer -days 365 -subj /CN=www.mysite.com
+# openssl req -new -x509 -key myselfsigned.key -out myselfsigned.cer -days 365 -subj /CN=www.mysite.com
 
-openssl pkcs12 -export -out myselfsigned.pfx -inkey myselfsigned.key -in myselfsigned.cer
+# openssl pkcs12 -export -out myselfsigned.pfx -inkey myselfsigned.key -in myselfsigned.cer
+```
+```
 
 openssl genrsa -out myCA.key 2048
 
