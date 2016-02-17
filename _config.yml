@@ -107,7 +107,7 @@ tag_generator:
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: next
+theme: yilia
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
