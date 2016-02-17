@@ -33,11 +33,12 @@ animate: true
 open_in_new: false
 
 # Miscellaneous
-google_analytics: ''
+google_analytics: 
+getclicky_analytics: '100784435'
 favicon: /favicon.ico
 
 #你的头像url
-avatar: https://avatars1.githubusercontent.com/u/4977911?v=3&s=460
+avatar: /avatar.png
 #是否开启分享
 share_jia: false
 share_addthis: false
@@ -64,4 +65,4 @@ friends:
 #不开启——
 #aboutme: false
 #开启——
-aboutme:
+aboutme: false
