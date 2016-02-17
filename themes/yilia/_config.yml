@@ -2,8 +2,8 @@
 menu:
   Home: /
   Archives: /archives
-  Categories: /categories
-  Tags: /tags
+  # Categories: /categories
+  # Tags: /tags
   # 随笔: /tags/随笔
 
 # SubNav
@@ -64,4 +64,4 @@ friends:
 #不开启——
 #aboutme: false
 #开启——
-aboutme: 不毛次元
+aboutme:
