@@ -38,6 +38,10 @@ cd /tmp && wget https://gist.githubusercontent.com/bumaociyuan/8945f34046c296c9a
 ```
 cd /etc/gw-redsocks/gw-shadowsocks && wget http://this.is26.com/download/gfw.txt && cat gfw.txt >> gw-shadowsocks.dnslist && /etc/init.d/dnsmasq restart
 ```
+# 自定义pac
+```
+vim /etc/gw-redsocks/gw-shadowsocks/gw-shadowsocks.dnslist
+```
 
 # 加速
 * [Setup a Shadowsocks relay](https://github.com/shadowsocks/shadowsocks/wiki/Setup-a-Shadowsocks-relay)
