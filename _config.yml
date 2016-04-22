@@ -116,6 +116,3 @@ deploy:
   repo: git@github.com:bumaociyuan/bumaociyuan.github.io.git
   branch: master
 
-alias:
-  gitzip/index.html: http://bumaociyuan.github.io/gitzip
-  gitzip/: http://bumaociyuan.github.io/gitzip
