@@ -32,12 +32,7 @@ cd /tmp && wget https://gist.githubusercontent.com/bumaociyuan/8945f34046c296c9a
 * 若shadowsocks选项显示的是：{ "msg": "请求的接口不存在.", "code": 560 }，请重启路由器。
 
 <!--more-->
-以下还未尝试
 
-# 一键更新路由表
-```
-cd /etc/gw-redsocks/gw-shadowsocks && wget http://this.is26.com/download/gfw.txt && cat gfw.txt >> gw-shadowsocks.dnslist && /etc/init.d/dnsmasq restart
-```
 # 自定义pac
 ```
 vim /etc/gw-redsocks/gw-shadowsocks/gw-shadowsocks.dnslist
