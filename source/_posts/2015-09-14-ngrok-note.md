@@ -185,6 +185,12 @@ $ ./ngrok -config config.cfg start http ssh
 $ ngrok -config config.cfg -subdomain=test 8000
 ```
 
+## Launch client in mac on startup using [Launchd](http://launchd.info/)
+
+```
+# Add Program to run following line
+<ngrok-path>/bin/ngrok -config <ngrok-path>/config.cfg start ssh  
+```
 
 
 Error on server log
