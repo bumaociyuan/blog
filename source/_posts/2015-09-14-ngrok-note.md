@@ -119,8 +119,8 @@ export PATH=$PATH:/usr/local/go/bin
 ### Compile
 
 ```
-$ GOOS=linux GOARCH=amd64 make 
-$ release-server
+$ GOOS=linux GOARCH=amd64 
+$ make release-server
 #如果是32位系统，这里 GOARCH=386
 ```
 
