@@ -8,9 +8,10 @@ tags: [node,atom]
 
 # Install Atom and node-debugger
 
-[Atom](https://atom.io/)
+[Install Atom](https://atom.io/)
 
 ```shell
+# install node-debugger with apm
 apm i node-debugger
 ```
 
