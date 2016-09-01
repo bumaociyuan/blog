@@ -1,6 +1,6 @@
 ---
 layout: post
-title: how-to-debug-node-with-atom
+title: How to debug node with atom
 date: 2016-09-01 15:01:09
 categories: node
 tags: [node,atom]
