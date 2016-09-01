@@ -10,7 +10,7 @@ tags: [node,atom]
 
 [Atom](https://atom.io/)
 
-```
+```shell
 apm i node-debugger
 ```
 
