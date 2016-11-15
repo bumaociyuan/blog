@@ -16,7 +16,7 @@ A tool to enforce Swift style and conventions, loosely based on [ GitHub's Swift
 [GitHub 地址](https://github.com/realm/SwiftLint)
 
 ```
-brew install swiftlint
+$ brew install swiftlint
 ```
 
 <!--more-->
